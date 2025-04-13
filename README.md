@@ -35,7 +35,6 @@ A fullstack web application where users can sign up, create forums, and interact
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/community-forums.git
-   cd community-forums
    ```
 
 2. Install dependencies:
