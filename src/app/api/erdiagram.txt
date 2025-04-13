@@ -1,0 +1,74 @@
+erDiagram
+    User ||--o{ Account : has
+    User ||--o{ Session : has
+    User ||--o{ Forum : creates
+    User ||--o{ Comment : writes
+    User ||--o{ Like : gives
+    
+    Forum ||--o{ Comment : contains
+    Forum ||--o{ Like : receives
+
+    User {
+        String id PK
+        String name
+        String email
+        DateTime emailVerified
+        String password
+        String image
+        DateTime createdAt
+        DateTime updatedAt
+    }
+    
+    Account {
+        String id PK
+        String userId FK
+        String type
+        String provider
+        String providerAccountId
+        String refresh_token
+        String access_token
+        Int expires_at
+        String token_type
+        String scope
+        String id_token
+        String session_state
+    }
+    
+    Session {
+        String id PK
+        String sessionToken
+        String userId FK
+        DateTime expires
+    }
+    
+    VerificationToken {
+        String identifier
+        String token
+        DateTime expires
+    }
+    
+    Forum {
+        String id PK
+        String title
+        String description
+        String[] tags
+        DateTime createdAt
+        DateTime updatedAt
+        String userId FK
+    }
+    
+    Comment {
+        String id PK
+        String content
+        DateTime createdAt
+        DateTime updatedAt
+        String forumId FK
+        String userId FK
+    }
+    
+    Like {
+        String id PK
+        String forumId FK
+        String userId FK
+        DateTime createdAt
+    }
