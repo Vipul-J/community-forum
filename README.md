@@ -61,14 +61,6 @@ A fullstack web application where users can sign up, create forums, and interact
 
 7. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deployment
-
-This application can be easily deployed using Vercel:
-
-1. Push your code to a GitHub repository.
-2. Import the project into Vercel.
-3. Configure the environment variables.
-4. Deploy!
 
 
 ```
